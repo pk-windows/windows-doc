@@ -2,20 +2,34 @@
 
 ## Installation
 
-TODO
+Download the portable zip file, extract to folder. Let's say `D:\softs\pgsql`
 
 ## Initializing DB
 
-TODO
+`-D` where the Database Directory is getting created, `-U` default superuser to create.
+
+```batch
+> D:\softs\pgsql\bin\initdb.exe -D D:\pgdata\ -U postgres
+```
 
 ## Starting server
 
-Assuming `D:\softs\pgsql\` is the installed directory.
+Now `D:\pgdata\` is the initializing DB has been created.
 
 ```batch
-> D:\softs\pgsql\bin\pgctl -D D:\pgdata\ start
+> D:\softs\pgsql\bin\postgres -D D:\pgdata\
+```
+
+or
+
+```batch
+> D:\softs\pgsql\bin\pg_ctl -D D:\pgdata\ start
 ```
 
 ## Checking server connection
 
-TODO
+`-d` is the `database` name, `-h` is the `server` host where it is running, `-p` where the server port is runnig.
+
+```batch
+> D:\softs\pgsql\psql -d postgres -h localhost -p 5432
+```
