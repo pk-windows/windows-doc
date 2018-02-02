@@ -22,8 +22,10 @@ Now `D:\pgdata\` is the initializing DB has been created.
 
 or
 
+For default user as `postgres` add `-U`
+
 ```batch
-> D:\softs\pgsql\bin\pg_ctl -D D:\pgdata\ start
+> D:\softs\pgsql\bin\pg_ctl -U postgres -D D:\pgdata\ start
 ```
 
 ## Checking server connection
